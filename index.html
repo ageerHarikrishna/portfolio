@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">HARI KRISHNA AGEER</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Hari Krishna Ageer</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+
+  <section id="profile">
+    
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Hari Krishna Ageer</h1>
+      <p class="section__text__p2">Data Engineer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/HARIKRISHNA -RESUME-(USF).pdf')">Download CV</button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://linkedin.com/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/'" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/hka.jpeg" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3> Experience</h3>
+            <p>2+ years <br />Data Engineer</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/usf.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>University of South Florida</p>
+            <p>Masters in Business Analytics and Information Systems</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            I specialize in big data ETL development and cloud data solutions. My experience spans across various data engineering roles and coursework at the University of South Florida, enhancing my skills in data engineering and analysis.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+ <!-- Work Experience Section -->
+ <section id="experience">
+  <p class="section__text__p1">My</p>
+  <h1 class="title">Work Experience</h1>
+  <div class="experience-container">
+    <div class="job">
+      <h3>Quantiphi</h3>
+      <p><strong>Data Engineer (Full Time) Nov 2022 – July 2023</strong></p>
+      <ul>
+        <li>Design and development of a robust data engineering framework on AWS, coupled with a Postgres SQL Database, resulting in a remarkable 30% improvement in data processing efficiency across multiple sources.</li>
+        <li>Designed an automation system to address the time-consuming and error-prone process of manual column and table updates, 
+          significantly reducing risk and improving data integrity by 80% across various environments.</li>
+        <li>Collaborated closely with business stakeholders to understand requirements and translate them into technical solutions, facilitating the creation of data analysis pipelines tailored to specific business needs.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Tiger Analytics|</h3>
+      <p><strong>Data Engineer (Internship) Jan 2022 – July 2022</strong></p>
+      <ul>
+        <li>Refined advanced analytical techniques to analyze customer behavior data, identifying key trends and opportunities for 
+          optimization, recommendations resulted in a 25% increase in average order value and a 30% improvement in customer 
+          retention.  </li>
+        <li>contributed to data warehousing initiatives, spearheading the extraction, transformation, and loading (ETL) of expansive 
+          datasets.  </li>
+      </ul>
+    </div>
+    <!-- Add more job experiences as needed -->
+  </div>
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+</section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="project-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          
+          <h2 class="experience-sub-title project-title">Twitter Data Pipeline using Airflow</h2>
+          <p>This project demonstrates an end-to-end data engineering pipeline using Airflow and Python. Data is extracted from the Twitter API, transformed using Python, and the entire workflow is orchestrated in Airflow and deployed on an EC2 instance with results stored on Amazon S3.</p>
+          
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+
+          </div>
+        </div>
+        <div class="details-container color-container">
+
+          <h2 class="experience-sub-title project-title">Predictive Analytics for Caravan Insurance</h2>
+          <p>Predictive analytics is used to identify customers with a high chance of purchasing caravan insurance. The model leverages 86 features related to customer demographics, behaviors, and existing policy data to score each customer’s tendency to buy caravan insurance.</p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+
+          </div>
+        </div>
+        <div class="details-container color-container">
+         
+          <h2 class="experience-sub-title project-title">Sales Analysis using Python</h2>
+          <p>The main objective of this project is to find trends in Diwali sales numbers that can improve customer satisfaction levels and raise revenue at the same time. It looks at product preferences during the Diwali season while considering purchasing patterns and client demographics.</p>
+
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#contact'"
+    />
+  </section>
+    <!-- Blog Section -->
+    <section id="blog">
+      <h2 class="title">Blog</h2>
+      <div class="blog-container">
+        <h3>Reflecting on a Blog: Zoom and Human Connection</h3>
+        <p>Imagine a world where technology brings people closer together, rather than driving them apart. That's the essence of a recent blog post titled "Zoom: Cultivating Human Connection in a Digital World."</p>
+        <ul>
+          <li><strong>Trust:</strong> Yuan believed that for Zoom to succeed, people needed to trust it. This meant being honest and transparent, both inside the company and with customers. By doing this, Zoom became a platform people could rely on.</li>
+          <li><strong>Humor:</strong> Even though Zoom is a serious tool for work and meetings, it also knows how to have fun. Adding features like funny backgrounds and filters made meetings more enjoyable and helped people feel closer, even when they were far apart.</li>
+          <li><strong>Love:</strong> Beyond just business, Zoom cares about bringing people together. Whether it's hosting weddings or helping families stay connected, Zoom wants to spread happiness and love through its platform.</li>
+        </ul>
+        <p>As someone studying Business Analytics and Information Systems, I find this blog inspiring. It shows how technology can be more than just numbers and data—it can be about people and relationships. By understanding this, I hope to use technology to make the world a friendlier and more connected place.</p>
+        <p>Sharing this reflection in my portfolio is important to me. It shows that I understand the human side of technology and how it can make a real difference in people's lives.</p>
+      </div>
+    </section>
+  
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img
+          src="./assets/email.png"
+          alt="Email icon"
+          class="icon contact-icon email-icon"
+        />
+        <p><a href="mailto:harikrishna15@usf.edu">harikrishna15@usf.edu</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img
+          src="./assets/linkedin.png"
+          alt="LinkedIn icon"
+          class="icon contact-icon"
+        />
+        <p><a href="https://www.linkedin.com/in/hari-0b09531a0/">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
